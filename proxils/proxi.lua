@@ -1,0 +1,97 @@
+if true then
+	error("This file should never be loaded")
+end
+
+--- @class _G
+--- @field proxi proxi
+
+--- @class proxi
+--- @field net proxiNet
+--- @field _R table Debug registry
+--- @field DEBUG boolean
+--- @field FRAME_UNDEFINED number -1
+--- @field FRAME_START number 0
+--- @field FRAME_NET_UPDATE_START number 1
+--- @field FRAME_NET_UPDATE_POSTDATAUPDATE_START number 2
+--- @field FRAME_NET_UPDATE_POSTDATAUPDATE_END number 3
+--- @field FRAME_NET_UPDATE_END number 4
+--- @field FRAME_RENDER_START number 5
+--- @field FRAME_RENDER_END number 6
+--- @field RunOnClient fun(m_strCode: string, m_strSource: string|nil, m_bHandleError: boolean|nil): boolean
+--- @field RunOnMenu fun(m_strCode: string, m_strSource: string|nil, m_bHandleError: boolean|nil): boolean
+--- @field StartPrediction fun(pCmd: CUserCmd)
+--- @field EndPrediction function
+--- @field GetConVar fun(strConvarName: string): ConVar|nil
+--- @field GetSequenceNumber fun(): number Returns m_nOutSequenceNr
+--- @field SetSequenceNumber fun(iSeq: number) Sets m_nOutSequenceNr
+--- @field GetFlowOutgoing fun(): number
+--- @field GetFlowIncoming fun(): number
+--- @field SetFrameTime fun(frametime: number)
+--- @field SetCurTime fun(curtime: number)
+--- @field GetPredictionAngles fun(): Angle
+--- @field SetPredictionAngles fun(ang: Angle)
+--- @field GetViewAngles fun(): Angle
+--- @field SetViewAngles fun(ang: Angle)
+--- @field DisableAnimInterp fun(bWantDisable: boolean)
+--- Lagger is removed
+--- SendVoiceData is removed (never pushed to Lua)
+--- @field FullUpdate function
+--- @field GetChokedCommands fun(): number
+--- @field Disconnect fun(pszReason: string)
+--- @field SendConsoleCommand fun(pszCommand: string)
+--- @field SendLuaError fun(strError: string)
+--- @field getinfo fun(funcOrStackLevel: number|function, fields: string|nil): table|nil
+--- @field getlocal (fun(thread: thread, level: number, index: number): string|nil, any) | (fun(level: number, index: number): string|nil, any)
+--- @field setlocal (fun(thread: thread, level: number, index: number, value: any): string|nil) | (fun(level: number, index: number, value: any): string|nil)
+--- @field getupvalue fun(func: function, index: number): string|nil, any
+--- @field setupvalue fun(func: function, index: number, value: any): string|nil
+--- @field getmetatable fun(object: any): table|nil
+
+--- @class proxiNet
+--- @field Start fun(strMessageName: string, unreliable: boolean|nil): boolean
+--- @field SendToServer function
+--- @field NetworkIDToString fun(index: number): string|nil
+--- @field NetworkStringToID fun(strMessageName: string): number 0 if not found
+--- @field WriteBit fun(bVal: boolean) Same as WriteBool
+--- @field WriteBool fun(bVal: boolean) Same as WriteBit
+--- @field WriteColor fun(Color: Color, bWriteAlpha: boolean|nil)
+--- @field WriteFloat fun(flVal: number)
+--- @field WriteInt fun(iVal: number, iBits:number)
+--- @field WriteUInt fun(iVal: number, iBits: number)
+--- @field WriteString fun(pszString: string)
+--- @field WriteEntity fun(pEnt: Entity)
+--- @field WriteVector fun(vec: Vector)
+--- @field WriteNormal fun(vec: Vector)
+--- @field WriteAngle fun(ang: Angle)
+--- @field WriteMatrix fun(matrix: VMatrix) Doesn't actually do anything
+
+--- @class proxiBFRead
+--- @field GetBitsLeft fun(self: proxiBFRead): number
+--- @field GetBytesLeft fun(self: proxiBFRead): number
+--- @field GetBitsRead fun(self: proxiBFRead): number
+--- @field GetBytesRead fun(self: proxiBFRead): number
+--- @field GetCurBit fun(self: proxiBFRead): number
+--- @field ReadByte fun(self: proxiBFRead): number
+--- @field ReadWord fun(self: proxiBFRead): number
+--- @field Reset fun(self: proxiBFRead)
+--- @field Seek fun(self: proxiBFRead, iBit: number) Actually performs a relative seek
+--- @field SeekRelative fun(self: proxiBFRead, iBitDelta: number) Actually performs a specific seek
+--- @field ReadAngle fun(self: proxiBFRead): Angle
+--- @field ReadBit fun(self: proxiBFRead): number
+--- @field ReadBool fun(self: proxiBFRead): boolean
+--- @field ReadColor fun(self: proxiBFRead, bHasAlpha: boolean): Color
+--- @field ReadData fun(self: proxiBFRead, iLen: number): string 0 length string on failure
+--- @field ReadDouble fun(self: proxiBFRead): number
+--- @field ReadEntity fun(self: proxiBFRead): Entity
+--- @field ReadFloat fun(self: proxiBFRead): number
+--- @field ReadInt fun(self: proxiBFRead, iBitCount: number): number
+--- @field ReadMatrix fun(self: proxiBFRead): VMatrix|nil Doesn't actually do anything, always returns nil
+--- @field ReadNormal fun(self: proxiBFRead): Vector
+--- @field ReadString fun(self: proxiBFRead): string
+--- @field ReadUInt fun(self: proxiBFRead, iBitCount: number): number
+--- @field ReadVector fun(self: proxiBFRead): Vector
+
+--- @diagnostic disable: missing-fields
+--- @type proxi
+_G.proxi = {}
+--- @diagnostic enable: missing-fields

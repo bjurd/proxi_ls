@@ -91,6 +91,27 @@ end
 --- @field ReadUInt fun(self: proxiBFRead, iBitCount: number): number
 --- @field ReadVector fun(self: proxiBFRead): Vector
 
+--- @class proxiStartSoundParams
+--- @field staticsound boolean
+--- @field userdata number
+--- @field entity Entity|nil
+--- @field entindex number|nil
+--- @field entchannel number
+--- @field soundname string
+--- @field origin Vector
+--- @field direction Vector
+--- @field updatepositions boolean
+--- @field volume number
+--- @field soundlevel number
+--- @field flags number
+--- @field pitch number
+--- @field specialdsp number
+--- @field fromserver boolean
+--- @field delay number
+--- @field speakerentity number
+--- @field suppressrecording boolean
+--- @field initialstreamposition number
+
 --- @diagnostic disable: missing-fields
 --- @type proxi
 _G.proxi = {}

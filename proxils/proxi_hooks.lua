@@ -296,4 +296,5 @@ end
 --- @overload fun(eventName: "ShouldSendLuaError", identifier: any, func: fun(strError: string): boolean|nil, string|nil)
 --- @overload fun(eventName: "ExecCommand", identifier: any, func: fun(szCommand: string): boolean|nil)
 --- @overload fun(eventName: "SendStringCmd", identifier: any, func: fun(szCommand: string): boolean|nil)
+--- @overload fun(eventName: "StartSound", identifier: any, func: fun(params: proxiStartSoundParams): proxiStartSoundParams|boolean|nil)
 function hook.Add(eventName, identifier, func) end

@@ -92,25 +92,25 @@ end
 --- @field ReadVector fun(self: proxiBFRead): Vector
 
 --- @class proxiStartSoundParams
---- @field staticsound boolean
---- @field userdata number
+--- @field staticsound boolean Can be overridden via hook return
+--- @field userdata number Can be overridden via hook return
 --- @field entity Entity|nil
---- @field entindex number|nil
---- @field entchannel number
+--- @field entindex number|nil Can be overridden via hook return
+--- @field entchannel number Can be overridden via hook return
 --- @field soundname string
---- @field origin Vector
---- @field direction Vector
---- @field updatepositions boolean
---- @field volume number
---- @field soundlevel number
---- @field flags number
---- @field pitch number
---- @field specialdsp number
---- @field fromserver boolean
---- @field delay number
---- @field speakerentity number
---- @field suppressrecording boolean
---- @field initialstreamposition number
+--- @field origin Vector Can be overridden via hook return
+--- @field direction Vector Can be overridden via hook return
+--- @field updatepositions boolean Can be overridden via hook return
+--- @field volume number Can be overridden via hook return
+--- @field soundlevel number Can be overridden via hook return
+--- @field flags number Can be overridden via hook return
+--- @field pitch number Can be overridden via hook return
+--- @field specialdsp number Can be overridden via hook return
+--- @field fromserver boolean Can be overridden via hook return
+--- @field delay number Can be overridden via hook return
+--- @field speakerentity number Can be overridden via hook return
+--- @field suppressrecording boolean Can be overridden via hook return
+--- @field initialstreamposition number Can be overridden via hook return
 
 --- @diagnostic disable: missing-fields
 --- @type proxi

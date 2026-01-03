@@ -19,7 +19,7 @@ end
 --- @field FRAME_RENDER_END number 6
 --- @field RunOnClient fun(m_strCode: string, m_strSource: string|nil, m_bHandleError: boolean|nil): boolean
 --- @field RunOnMenu fun(m_strCode: string, m_strSource: string|nil, m_bHandleError: boolean|nil): boolean
---- @field StartPrediction fun(pCmd: CUserCmd)
+--- @field StartPrediction fun(pCmd: CUserCmd, bIgnoreHooks: boolean|nil)
 --- @field EndPrediction function
 --- @field GetConVar fun(strConvarName: string): ConVar|nil
 --- @field GetSequenceNumber fun(): number Returns m_nOutSequenceNr

@@ -25,10 +25,10 @@ end
 --- @field SetRandomSeed fun(self: CUserCmd, random_seed: number)
 
 --- @class ConVar
---- @field ForceSetBool fun(self: ConVar, bVal: boolean)
---- @field ForceSetInt fun(self: ConVar, iVal: number)
---- @field ForceSetFloat fun(self: ConVar, flVal: number)
---- @field ForceSetString fun(self: ConVar, value: string)
+--- @field ForceBool fun(self: ConVar, bVal: boolean)
+--- @field ForceInt fun(self: ConVar, iVal: number)
+--- @field ForceFloat fun(self: ConVar, flVal: number)
+--- @field ForceString fun(self: ConVar, value: string)
 --- @field ForceMin fun(self: ConVar, fMinVal: number)
 --- @field ForceMax fun(self: ConVar, fMaxVal: number)
 --- @field SetFlags fun(self: ConVar, nFlags: number)
